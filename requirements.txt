@@ -1,0 +1,2 @@
+# No external dependencies required for core functionality.
+# Tool uses standard library (re, csv, argparse, collections).

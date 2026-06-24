@@ -1,27 +1,27 @@
 # M-Pesa Ledger CLI 2026
 
-A command-line tool designed to parse M-Pesa transaction SMS history and generate structured financial reports. It helps users track spending, analyze monthly cash flows, and identify top transaction recipients.
+A lightweight command-line utility to parse exported M-Pesa transaction SMS messages and generate personal finance insights.
 
 ## Features
-- **Automated Parsing**: Uses regex to extract ID, Amount, Date, Time, and Counterparty from raw SMS text.
-- **Transaction Categorization**: Automatically identifies Send Money, Receive Money, Paybill, and Agent Withdrawals.
-- **Financial Insights**: Generates summaries of spending by category and monthly trends.
-- **CSV Export**: Export parsed data for use in Excel or other accounting software.
+- Parses standard M-Pesa SMS confirmation formats.
+- Calculates total income vs. total expenditure.
+- Identifies top expense categories/recipients.
+- Exports parsed data to CSV for further analysis in Excel or Google Sheets.
 
-## Installation
-1. Ensure you have Python 3.8+ installed.
-2. Clone this repository or download the files.
+## Requirements
+- Python 3.7+
 
 ## Usage
-1. Copy your M-Pesa SMS messages into a text file (e.g., `messages.txt`).
+1. Save your M-Pesa SMS history into a plain text file (e.g., `history.txt`).
 2. Run the tool:
    ```bash
-   python main.py messages.txt
+   python main.py history.txt
    ```
-3. Export to CSV:
+3. To export to CSV:
    ```bash
-   python main.py messages.txt --csv report.csv
+   python main.py history.txt --csv report.csv
    ```
 
-## Data Privacy
-This tool processes data locally on your machine. No transaction information is uploaded to any external server.
+## Expected SMS Format Example
+`ABC123DEF4 Confirmed. Ksh2,500.00 paid to KPLC. on 15/6/26 at 8:45 PM.`
+`GHI567JKL8 Confirmed. You have received Ksh1,000.00 from Jane Doe 0712345678 on 16/6/26 at 9:00 AM.`

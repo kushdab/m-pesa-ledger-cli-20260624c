@@ -1,10 +1,20 @@
+# Python bytecode
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Environments
 .env
 .venv
 env/
 venv/
 ENV/
-report.csv
-messages.txt
+
+# Reports
+*.csv
+*.txt
+!requirements.txt
+
+# OS metadata
+.DS_Store
+Thumbs.db
